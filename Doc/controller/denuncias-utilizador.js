@@ -1,5 +1,7 @@
 import * as fetch from "./functions/fetch.js"
 
+
+
 const $ = q => {
     return document.querySelector(q);
 };
@@ -7,11 +9,6 @@ const $ = q => {
 
 //Altera o id confirmar para o correspondente do butao da pagina
 $('#confirm').addEventListener('click', function () {
-    saveData();
-});
-
-
-function saveData() {
     if ($('#email3').value.trim() == '' && $('#descricao').value.trim() == '') {
         Swal.fire(
             'Preencha todos os campos!',
@@ -19,17 +16,23 @@ function saveData() {
             'error'
         )
     } else {
-        let denounce = {
-            "title": $('#email3').value.trim(),
-            "description": $('#descricao').value.trim()
-        }
-        console.log(denounce);
-        fetch.postData('reports/anonymous', denounce).then(response => {
-            console.log(response)
+    saveData();
+    }
+});
 
-            if (response.ok) {
+
+function saveData() {
+    let denounce = {
+        "title": $('#email3').value.trim(),
+        "description": $('#descricao').value.trim()
+    }
+
+    console.log(denounce);
+    fetch.postData('reports', denounce).then(response => {
+        console.log(response)
+            if(response.ok){
                 Swal.fire(
-                    'A sua denuncia foi enviada com sucesso!',
+                    'Submetido com sucesso!',
                     '',
                     'success'
                 ).then((result) => {
@@ -43,10 +46,12 @@ function saveData() {
                     'Erro de submissao!',
                     '',
                     'error'
-                ) 
+                )
             }
+          
+            
         }
-
-        );
-    }
+    );
 }
+
+

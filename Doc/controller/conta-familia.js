@@ -7,9 +7,9 @@ const $ = q => {
     return document.querySelector(q);
   };
   
-  fetch.getData('family/' + sessionStorage.getItem("id_user")).then(data => {
+  fetch.getData('families/' + sessionStorage.getItem("id_user")).then(data => {
     console.log(data)
-    $('#email').value = data.login.email
+    $('#email1').value = data.login.email
     $('#pwd').value = data.password
     $('#checkPwd').value = data.confirmPassword
     $('#name').value = data.name  
@@ -18,7 +18,7 @@ const $ = q => {
     $('#city').value = data.city
     $('#country').value = data.county
     $('#postalCode').value = data.postalCode
-    $('#adress').value = data.address
+    $('#country').value = data.address
   })
   
 

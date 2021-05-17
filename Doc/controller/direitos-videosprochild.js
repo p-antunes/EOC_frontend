@@ -52,9 +52,9 @@ $('#delete').addEventListener('click', function () {
     fetch.getData('videorights').then(data => {
         console.log(data);
         let idVideo = data[0].idVideo;
-        fetch.deleteData('videorights/' + idVideo).then(data => {
-            console.log(data)
-            if (data.success) {
+        fetch.deleteData('videorights/' + idVideo).then(response => {
+            console.log(response)
+            if (response.ok) {
                 Swal.fire(
                     'Eliminado com sucesso!',
                     '',

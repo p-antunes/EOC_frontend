@@ -8,17 +8,17 @@ document.getElementById('ver-sug').addEventListener('click', function () {
 
     let selected = $("#Table-denun tr").hasClass("selected");
     console.log(selected)
-    if(selected){
+    if (selected) {
         let id = sessionStorage.getItem('id_suggestion')
-    console.log(id)
-    getData('suggestions/' + id).then(data => {
-        console.log(data)
-        Swal.fire(
-            `${data.title}`,
-            `${data.suggestion}`,
-            ''
-        )
-    })
+        console.log(id)
+        getData('suggestions/' + id).then(data => {
+            console.log(data)
+            Swal.fire(
+                `${data.title}`,
+                `${data.suggestion}`,
+                ''
+            )
+        })
     } else {
         Swal.fire(
             'Seleciona uma linha!',
@@ -26,57 +26,57 @@ document.getElementById('ver-sug').addEventListener('click', function () {
             'error'
         )
     }
-    
+
 });
 
-document.getElementById('delete-sug').addEventListener('click', function () {
-    let selected = $("#Table-denun tr").hasClass("selected");
-    console.log(selected)
 
-    if(selected){
-        Swal.fire({
-            title: 'Tens a certeza?',
-            inputAttributes: {
-                autocapitalize: 'off'
-            },
-            showCancelButton: true,
-            confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Cancelar',
-            confirmButtonColor: '#130470',
-            showLoaderOnConfirm: true,
-            preConfirm: () => {
-                let id = sessionStorage.getItem('id_suggestion');
-                deleteData('suggestions/' + id).then(response => {
-                    console.log(response.ok)
-                    if (response.ok) {
-                        Swal.fire(
-                            'Eliminado com sucesso!',
-                            '',
-                            'success'
-                        ).then((result) => {
-                            if (result.value) {
-                                getSuggestions()
-                            }
-                        })
-                    } else {
-                        Swal.fire(
-                            'Não foi possível eliminar!',
-                            '',
-                            'error'
-                        )
-                    }
-                })
-            }
-        });
-    } else {
+document.getElementById('add-denun').addEventListener('click', function () {
+    
+
+    if(document.getElementById('email3').value.trim() == '' && document.getElementById('descricao').value.trim()==''){
         Swal.fire(
-            'Seleciona uma linha!',
+            'Preencha todos os campos!',
             '',
             'error'
         )
+    } else {
+       saveData()
     }
     
 });
+
+
+function saveData(){
+    let suggestion = {
+        "title": document.getElementById('email3').value,
+        "suggestion": document.getElementById('descricao').value
+    }
+
+    console.log(suggestion);
+    postData('suggestions', suggestion).then(response => {
+        console.log(response)
+
+        if (response.ok) {
+            Swal.fire(
+                'Submetido com sucesso',
+                '',
+                'success'
+            ).then((result) => {
+                if (result.value) {
+                    $('#email3').value = '';
+                    $('#descricao').value = '';
+                }
+            })
+        } else {
+            Swal.fire(
+                'Erro de submissao',
+                '',
+                'error'
+            )
+        }
+    });
+}
+
 
 
 getSuggestions()
@@ -103,9 +103,9 @@ function getSuggestions() {
             <tr>
                 <td>${data[i].idSuggestion}</td>
                 <td>${data[i].title}</td>
-                <td>Nome</td>
-                <td>Contacto</td>
-                <td>Morada</td>
+                <td>${data[i].name}</td>
+                <td>${data[i].phoneNr}</td>
+                <td>${data[i].county}</td>
                 <td>${data[i].suggestion}</td>
             </tr>
         `
@@ -114,10 +114,9 @@ function getSuggestions() {
         console.log(txt)
         $('#dataTable_wrapper').html(txt);
 
-        
+
     }).then(() => {
         $("#Table-denun tr").click(function () {
-            
             $(this).addClass('selected').siblings().removeClass('selected');
             var id = $(this).find('td:first').html();
             sessionStorage.setItem('id_suggestion', id)
@@ -148,11 +147,29 @@ async function deleteData(route) {
         },
         method: 'DELETE',
     })
-    
+    console.log(response)
+    const res = await response.json();
+    console.log(res)
+    return res;
+}
+
+async function postData(route, data) {
+    console.log(urlBase + route)
+    const response = await fetch(urlBase + route, {
+        credentials: 'include',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + sessionStorage.getItem("accessToken"),
+            'Cookie': 'token=' + sessionStorage.getItem("accessToken")
+        },
+        method: 'POST',
+        body: JSON.stringify(data)
+    })
+
     console.log(response)
     return response;
 }
-
 
 
 

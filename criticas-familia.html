@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/paginainicial.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -52,7 +55,6 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="forum-familias.html">Fórum</a>
-                                    
                                        </li>
                                       <li><a href="materiais-familias.html">Materiais</a></li>
                                       <li><a href="jogos-familias.html">Jogos</a></li>
@@ -92,13 +94,43 @@
             <br>
     </main>
     <body>
+        <div id="layoutSidenav_content">
+            <div class="card-body" id="123">
+                <div class="table-responsive">
+                    <h1 id="title-ver-denun">Lista de Críticas</h1>
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        <table class="table table-bordered supTable" id="Table-denun" width="100%" cellspacing="0"
+                            data-page-length='-1'>
+                            <thead>
+                                <tr>
+                                    <th>Titulo</th>
+                                    <th>Nome</th>
+                                    <th>Contacto</th>
+                                    <th>Morada</th>
+                                    <th>Morada</th>
+                                    <th>Conteúdo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 text-right">
+                        <input id="delete-critica" class="btn btn-primary text-uppercase js-scroll-trigger" type="reset"
+                            value="Eliminar"></input>
+                        <input id="ver-critica" class="btn btn-primary text-uppercase js-scroll-trigge" type="submit"
+                            value="Visualizar Critica" href=""></input>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="space2"></div>
                 <div class="container">
                     <div class="col-sm-12">
                         <p class="title-sugestoes" id="sugestoes-titulo">Críticas</p>
                     </div>
                 </div>
-
+                
                 <div class="space2"></div>
                 <div class="col-lg-8" id="title-reg">
         
@@ -120,9 +152,14 @@
         
         
                         <div>
-                            <span class="confirmarsug">Confirmar</span></button>
+                            <input id="add-denun" class="btn btn-primary  confirmarsug" value="Confirmar" ></input>
+
                         </div>
+         
+
                     </form>
+                    <div class="space2"></div>
+                    <div class="space2"></div>
                 </div>
     </body>
     
@@ -162,6 +199,7 @@
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
 
+    <script src="./Doc/controller/criticas-utilizador.js"></script>
 </body>
 
 </html>

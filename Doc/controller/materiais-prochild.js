@@ -68,8 +68,38 @@ $('#addFile').addEventListener("click", e => {
     })
 })
 
+$('#remover-mat').addEventListener("click", e => {
+    let url = "http://localhost:8080/files/945663e4-0c87-41f1-af58-2d56a77f710a"
+    let id = getIDMateriais(url)
+    e.preventDefault();
+    fetch.deleteData('files/' + id).then(data => {
+        if (data.ok) {
+            Swal.fire(
+                'Material eliminado com successo',
+                '',
+                'success'
+            ).then((result) => {
+                if (result.value) {
+                    getMateriais()
+                }
+            })
+
+        } else {
+            Swal.fire(
+                'Não foi possível eliminar o material',
+                '',
+                'error'
+            )
+        }
+    })
+})
 
 function addAPIToUrl(obj) {
     let url = obj.url;
     return url.substring(0, 22) + "api/" + url.substring(22,);
+}
+
+
+function getIDMateriais(url) {
+    return url.substring(28,);
 }

@@ -26,10 +26,7 @@ async function postData(route, data) {
         body: JSON.stringify(data)
     })
 
-    console.log(response)
-    const res = await response.json();
-    console.log(res)
-    return res;
+    return response;
 }
 
 
@@ -46,11 +43,6 @@ async function postFile(route, data){
 }
 
 async function deleteData(route) {
-    // fetch(urlBase + route, {
-    //     method: 'DELETE',
-    // })
-    //     .then(res => res.text())
-    //     .then(res => console.log(res))
     console.log(urlBase + route)
     const response = await fetch(urlBase + route, {
         credentials: 'include',
@@ -63,9 +55,7 @@ async function deleteData(route) {
         method: 'DELETE',
     })
     console.log(response)
-    const res = await response.json();
-    console.log(res)
-    return res;
+    return response;
 }
 
 

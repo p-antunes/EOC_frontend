@@ -14,7 +14,7 @@ $('#addArticle').addEventListener('click', function () {
         inputAttributes: {
             autocapitalize: 'off'
         },
-        html: '<input id="txtTitle" class="swal2-input" placeholder="Titulo"><textarea type="text" id="txtArticle" style="height:200px;" class="swal2-input" rows="4" cols="50" maxlength="200"></textarea><input id="txtLink" class="swal2-input" placeholder="Fonte">',
+        html: '<input id="txtTitle" class="swal2-input" placeholder="Titulo"><textarea type="text" id="txtArticle" style="height:200px;" class="swal2-input" maxlength="500"></textarea><input id="txtLink" class="swal2-input" placeholder="Fonte">',
         showCancelButton: true,
         confirmButtonText: 'Adicionar',
         cancelButtonText: 'Cancelar',
@@ -100,48 +100,6 @@ $('#deleteArticle').addEventListener('click', function () {
 });
 
 
-// $('#addSuggestion').addEventListener('click', function () {
-//     Swal.fire({
-//         title: 'Adicionar sugestao',
-//         inputAttributes: {
-//             autocapitalize: 'off'
-//         },
-//         html: '<input id="txtTitle" class="swal2-input" placeholder="Titulo"><input type="text" id="txtSuggestion" style="height:200px;" class="swal2-input">',
-//         showCancelButton: true,
-//         confirmButtonText: 'Adicionar',
-//         cancelButtonText: 'Cancelar',
-//         confirmButtonColor: '#E5004E',
-//         showLoaderOnConfirm: true,
-//         preConfirm: () => {
-//             let data =
-//             {
-//                 "title": $('#txtTitle').value,
-//                 "suggestion": $('#txtSuggestion').value,
-//             }
-//             fetch.postData('suggestions', data).then(response => {
-//                 console.log(response.success)
-//                 if (response.success) {
-//                     Swal.fire(
-//                         'Adionado com sucesso!',
-//                         '',
-//                         'success'
-//                     ).then((result) => {
-//                         if (result.value) {
-//                             getSuggestion()
-//                         }
-//                     })
-//                 } else {
-//                     Swal.fire(
-//                         'Não foi possível adicionar o sugestao',
-//                         '',
-//                         'error'
-//                     )
-//                 }
-//             })
-//         }
-//     });
-// });
-
 getArticle()
 
 
@@ -173,15 +131,6 @@ function getArticle() {
         $('#articles').innerHTML = txt;
     });
 }
-
-
-// deleteSuggestion()
-
-// function deleteSuggestion() {
-//     fetch.deleteData('articles/5').then(data => {
-//         console.log(data)
-//     });
-// }
 
 
 

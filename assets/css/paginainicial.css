@@ -88,8 +88,8 @@ html, body {
     text-align: left;
 }
 .selected {
-    color: red;
-    background-color: yellow;
+    color: white;
+    background-color: #130470;
 }
  /*-----------------------------------------------menu-adolescente------------------------------------------------*/
 
@@ -1193,9 +1193,9 @@ tr.selecionado td {
 }
 
 #sun{
-    position: relative;
-    top:-540px;
-    left:450px;
+    position: absolute;
+    top:200px;
+    left:1250px;
 }
 
 #a1{
@@ -1493,7 +1493,7 @@ padding: 10px 20px !important;
 
 .confirmarsug{ 
     position: relative;
-    left:860px;
+    left:780px;
     top:70px;
     height: 40px;
     width: 180px;
@@ -1509,7 +1509,7 @@ padding: 10px 20px !important;
 }
 .confirmarsug:hover, .confirmarsug:focus{
     position: relative;
-    left:860px;
+    left:780px;
     top:70px;
     height: 40px;
     width: 180px;

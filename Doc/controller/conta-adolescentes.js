@@ -5,10 +5,18 @@ import * as fetch from "./functions/fetch.js"
 const $ = q => {
     return document.querySelector(q);
   };
+
+  const show = q => {
+    $(q).style.display = 'block';
+  };
+  
+  const hide = q => {
+    $(q).style.display = 'none';
+  };
   
   fetch.getData('teenagers/' + sessionStorage.getItem("id_user")).then(data => {
     console.log(data)
-    $('#email').value = data.login.email
+    $('#email1').value = data.login.email
     $('#pwd').value = data.password
     $('#checkPwd').value = data.confirmPassword
     $('#name').value = data.name  

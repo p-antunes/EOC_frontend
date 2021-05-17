@@ -27,55 +27,7 @@ document.getElementById('ver-denun').addEventListener('click', function () {
     
 });
 
-document.getElementById('delete-denun').addEventListener('click', function () {
-    let selected = $("#Table-denun tr").hasClass("selected");
-    console.log(selected)
 
-    if(selected){
-        Swal.fire({
-            title: 'Tens a certeza?',
-            inputAttributes: {
-                autocapitalize: 'off'
-            },
-            showCancelButton: true,
-            confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Cancelar',
-            confirmButtonColor: '#130470',
-            showLoaderOnConfirm: true,
-            preConfirm: () => {
-                let id = sessionStorage.getItem('id_denun');
-                console.log(id)
-                deleteData('reports/' + id).then(response => {
-                    console.log(response.success)
-                    if (response.success) {
-                        Swal.fire(
-                            'Eliminado com sucesso!',
-                            '',
-                            'success'
-                        ).then((result) => {
-                            if (result.value) {
-                                getReports()
-                            }
-                        })
-                    } else {
-                        Swal.fire(
-                            'Não foi possível eliminar!',
-                            '',
-                            'error'
-                        )
-                    }
-                })
-            }
-        });
-    } else {
-        Swal.fire(
-            'Seleciona uma linha!',
-            '',
-            'error'
-        )
-    }
-    
-});
 
 
 
@@ -142,24 +94,3 @@ async function getData(route) {
     const data = await response.json();
     return data;
 }
-
-
-
-async function deleteData(route) {
-    console.log(urlBase + route)
-    const response = await fetch(urlBase + route, {
-        credentials: 'include',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + sessionStorage.getItem("accessToken"),
-            'Cookie': 'token=' + sessionStorage.getItem("accessToken")
-        },
-        method: 'DELETE',
-    })
-    console.log(response)
-    const res = await response.json();
-    console.log(res)
-    return res;
-}
-

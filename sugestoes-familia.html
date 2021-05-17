@@ -23,9 +23,13 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/paginainicial.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
+
     <!--? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -39,6 +43,7 @@
     </div>
     <!-- Preloader Start -->
     <header>
+
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header header-sticky">
@@ -52,16 +57,14 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="forum-familias.html">Fórum</a>
-                                        <ul class="submenu">
-                                            <li><a href="adicionar-artigo.html">Adicionar artigo</a></li>
-                                        </ul>
-                                       </li>
-                                      <li><a href="materiais-familias.html">Materiais</a></li>
-                                      <li><a href="jogos-familias.html">Jogos</a></li>
-                                      <li><a href="direitos-familias.html">Direitos</a></li>
-                                      <li><a href="conta-familia.html">Conta</a></li>
-                                      <div> 
-                                        <a href="index.html"> <img src="assets/img/gallery/exit.png" id="exit2" alt=""></a>
+                                    </li>
+                                    <li><a href="materiais-familias.html">Materiais</a></li>
+                                    <li><a href="jogos-familias.html">Jogos</a></li>
+                                    <li><a href="direitos-familias.html">Direitos</a></li>
+                                    <li><a href="conta-familia.html">Conta</a></li>
+                                    <div>
+                                        <a href="index.html"> <img src="assets/img/gallery/exit.png" id="exit2"
+                                                alt=""></a>
                                     </div>
                                 </ul>
                             </nav>
@@ -73,7 +76,7 @@
                         </div>
     </header>
     <main>
-        
+
         <div class="container">
             <div class="col-sm-12">
                 <p class="title-dir" id="forum2_titulo">Fórum</p>
@@ -81,51 +84,70 @@
             <hr class="division2" id="division2">
         </div>
         <div class="menu-forum">
-        <div class="main-menu d-none d-lg-block">
-            <nav>
-                <ul id="navigation1">
-                    <li><a href="forum-familias.html" id="menu-2">Artigos</a></li>
-                    <li><a href="sugestoes-familia.html" id="menu-2">Sugestões</a></li>
-                    <li><a href="criticas-familia.html" id="menu-2">Críticas</a></li>
-                </ul>
-            </nav>
+            <div class="main-menu d-none d-lg-block">
+                <nav>
+                    <ul id="navigation1">
+                        <li><a href="forum-familias.html" id="menu-2">Artigos</a></li>
+                        <li><a href="sugestoes-familia.html" id="menu-2">Sugestões</a></li>
+                        <li><a href="criticas-familia.html" id="menu-2">Críticas</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-<div class="space2"></div>
-                <div class="container">
-                    <div class="col-sm-12">
-                        <p class="title-sugestoes" id="sugestoes-titulo">Sugestões</p>
+        <div id="layoutSidenav_content">
+            <div class="card-body" id="123">
+                <div class="table-responsive">
+                    <h1 id="title-ver-denun">Lista de Sugestões</h1>
+                    <div id="dataTable_wrapper"></div>
+
+                    <div class="col-sm-12 text-right">
+
+                        <input id="ver-sug" class="btn btn-primary text-uppercase js-scroll-trigge" type="submit"
+                            value="Visualizar Sugestão" href=""></input>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="space2"></div>
 
-                <div class="space2"></div>
-                <div class="col-lg-8" id="title-reg">
-        
-                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-        
-                        <div class="col-md-6 form-group ">
-                            <input type="text" class="form-control inputBorder" id="email3" name="titulo"
-                                placeholder="Insira o tópico da Sugestão" />
-                        </div>
-        
-        
-                        <div class="col-md-12 form-group ">
-                            <input type="text" class="form-control inputBorder" id="descricao" name="descrição"
-                                placeholder="Sugestão" />
-                        </div>
-        
-        
-        
-        
-        
-                        <div>
-                            <span class="confirmarsug">Confirmar</span></button>
-                        </div>
-                    </form>
+        <div class="container">
+            <div class="col-sm-12">
+                <p class="title-sugestoes" id="sugestoes-titulo">Sugestões</p>
+            </div>
+        </div>
+
+        <div class="space2"></div>
+
+        <div class="col-lg-8" id="title-reg">
+
+            <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+
+                <div class="col-md-6 form-group ">
+                    <input type="text" class="form-control inputBorder" id="email3" name="titulo"
+                        placeholder="Insira o tópico da Sugestão" />
                 </div>
 
+
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control inputBorder" id="descricao" name="descrição"
+                        placeholder="Sugestão" />
+                </div>
+
+
+
+
+
+                <div>
+                    <input id="add-denun" class="btn btn-primary  confirmarsug" value="Confirmar"></input>
+                </div>
+            </form>
+            <div class="space2"></div>
+            <div class="space2"></div>
+        </div>
+       
+
     </main>
-    
+
     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -161,6 +183,7 @@
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
 
+    <script src="./Doc/controller/sugestoes-utlizador.js"></script>
 </body>
 
 </html>

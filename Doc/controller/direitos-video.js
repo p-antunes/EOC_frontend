@@ -1,11 +1,10 @@
-// Link de videos ------------------------------------------------------------------------------------------------------------------------------------
 import * as fetch from "./functions/fetch.js"
 
 const $ = q => {
     return document.querySelector(q);
   };
 
-// https://www.youtube.com/embed/2txldr_OVcg
+
 fetch.getData('videorights').then(data => {
     console.log(data);
     let txt = '';
@@ -21,14 +20,7 @@ fetch.getData('videorights').then(data => {
     $('#videos').innerHTML = txt;
 });
 
-// let dataVideo = {
-//       "linkVideo": "https://www.youtube.com/embed/wmNnzKOOuA0"
-// };
 
-// fetch.postData('videorights', dataVideo);
-
-// let idVideo = 3;
-// fetch.deleteData('videorights/' + idVideo);
 
 
 
