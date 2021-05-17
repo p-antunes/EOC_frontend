@@ -1,0 +1,1554 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:200,300,400,500,600,700|Roboto:100,300,400,500,700&display=swap");
+
+
+/*-------------------------------------Global------------------------------------*/
+
+/* INPUTS */
+.stringBox{
+    border-radius: 80px !important;
+
+}
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+.slide-bg {
+    background: #ffffff !important;
+}
+
+.btn_1 {
+    background-color: #E5004E !important;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    width: 185px;
+    outline:none;
+    text-align: center !important;
+    cursor: pointer;
+    left: 485px;
+    top: 10px;
+    height: 55px;
+}
+
+.btn_1:not([disabled]):hover {
+    background-color: #E5004E !important;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    width: 185px;
+    outline: none;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.btn_1:focus{
+    background-color: #E5004E !important;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    width: 185px;
+    outline: none;
+    text-align: center;
+    opacity: 0.8;
+}
+
+#scrollUp {
+    background: #E5004E !important;
+}
+
+
+#denun-inicial{
+    margin-top:464px;
+    margin-left:210px;
+}
+
+.highlight {
+    background: rgba(181, 2, 2, 0.69) !important;
+  }
+
+  .table-layout {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family:"Trebuchet MS";
+    margin: 0 auto 0;
+}
+.table-layout td, .table-layout th {
+    border: 1px solid grey;
+    padding: 5px 5px 0;
+}
+.table-layout td {
+    text-align: left;
+}
+.selected {
+    color: red;
+    background-color: yellow;
+}
+ /*-----------------------------------------------menu-adolescente------------------------------------------------*/
+
+#exit2{
+    width: 45px;
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+
+#logo-adolescente{
+    position: relative;
+    top:-10px;
+}
+
+
+
+ /*---------------------------------menu-instituições-familias-prochild-informatico-psicologa---------------------*/
+
+
+
+
+/*-----------------------------------------------------menu-criança-----------------------------------------------*/
+#innerButton{
+ position: relative; 
+ top: 10%;
+
+}
+
+#menu-child-img{
+    margin-left: 480px;
+}
+
+#logo-1{
+    position:absolute;
+ top:10px;
+}
+
+#exit{
+    margin-top: -300px;
+    margin-left: 1750px;
+    width: 60px;
+}
+
+#exit6{
+    position: absolute;
+    width: 50px;
+    top:15px;
+    right:10px;
+}
+
+.btn-menu {
+    background-color: #E5004E !important;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    width: 140px;
+    outline:none;
+    text-align: center;
+    cursor: pointer;
+    position: relative !important;
+    left:25px;
+    top: -80px;
+    height: 50px;
+}
+
+.btn-menu:hover , .btn-menu:focus{
+    background-color: #ff3c77 !important;
+    border-radius: 15px;
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    width: 140px;
+    outline:none;
+    text-align: center;
+    cursor: pointer;
+    position: relative !important;
+    left:25px;
+    top: -80px;
+    height: 50px;
+} 
+
+#tituloMenuChild{
+    position: relative;
+    left: -195px;
+}
+
+#menu-child-img{
+    position:relative !important;
+    margin-right: 27%;
+}
+
+
+#innerBox{
+    /* background-color:antiquewhite; */
+    z-index: -10;
+}
+
+#innerButton{
+    z-index: 1;
+    /* background-color: blue; */
+    position: relative;
+    text-align: center;
+
+    width: 200px;
+    height: 100px;
+    bottom: 240px;
+}
+
+
+
+@media (max-width: 1100px){
+    #arcoIrisImg{
+        width: 600px;
+        height: 450px;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*-------------------------------------- direitos-crianças ----------------------------*/
+
+#direitos-tittle{
+    margin-top:2px;
+    margin-right:570px;
+}
+
+.texto{
+font-size: 25px;
+font-style: oblique;
+font-weight: lighter;
+text-shadow: #cacaca;
+}
+
+#direitos-men{
+    width: 250px;
+    height: 55px;
+    background-color: #fad586;
+    border-radius: 15px;
+    border-color: #fce29c;
+    cursor: pointer;
+    
+}
+
+#imagem{
+    border-radius: 17px;
+    width: 200px;
+}
+
+/*videos-direitos*/
+
+.title-videos{
+    font-size: 25;
+    font-weight: lighter;
+    background-color: #ffeaaf ;
+    border-color: #ffeaaf;
+    color:rgb(253, 199, 82);
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*-----------------------------------direitos-adolescentes----------------------------*/
+
+
+
+
+
+
+
+
+/*---------------------------------- direitos-prochild -----------------------*/
+
+#campainha1{
+    margin-top: -70px;
+    margin-left: 1350px;
+}
+
+.title-dir{
+    color: #EA9210;
+    margin-left: -2.5%;
+
+}
+
+hr {
+    margin-top: 10px !important;
+    margin-bottom: 2rem;
+    border-top: 2px solid #EA9210; 
+    width: 1000px;
+}
+
+
+/*----------------------------------chat-----------------------------------*/
+
+#mensagem{
+    position: relative;
+    top: 120px;
+    left: -220px;
+    height: 145px;
+    width: 75%;
+    color:black;
+    background-color: rgb(247, 247, 247);
+    border: 0.5em;
+    text-align: left;
+}
+
+#send {
+    position: relative;
+    top: 120px;
+    right: 300px;
+}
+
+  .side-navbar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    margin-left: -300px;
+    background-color: #E4CEF0;
+    transition: 0.5s;
+  }
+  
+  .nav-link:active,
+  .nav-link:focus,
+  .nav-link:hover {
+    background-color: #ffffff26;
+  }
+  
+  .my-container {
+    transition: 0.4s;
+  }
+  
+  .active-nav {
+    margin-left: 0;
+  }
+  
+  /* for main section */
+  .active-cont {
+    margin-left: 190px;
+  }
+  
+  #menu-btn {
+    background-color: #E4CEF0;
+    color: #fff;
+    margin-left: -62px;
+  }
+  
+  .my-container input {
+    border-radius: 2rem;
+    padding: 2px 20px;
+  }
+
+  #logoChat{
+      position: relative;
+      top: 30px;
+      left: 80px;   
+     
+  }
+
+
+  #backChat{
+      position: relative;
+      right: 60px;
+      bottom: 30px;
+      transform: rotate(180deg);
+  }
+  
+
+  .message_holder {
+    margin-bottom : 5px;
+  }
+  .chat_container {
+    border-radius: 2px #130470 !important;
+    width : 75%;
+    height : 550px;
+    background-color : white;
+    overflow: auto;
+    padding : 5px 5px 0px 5px ;
+  }
+  .chat {
+    padding : 10px;
+    border: 2px solid #ccc;
+  }
+  .user1{
+    float : left;
+    border-radius : 0px 10px 10px 10px;
+  }
+  .user2{
+    float : right;
+    border-radius : 10px 0px 10px 10px;
+  }
+/*---------------------------------------------------forum-crianças-----------------------------------------------------------*/
+
+#back{
+    position: absolute;
+    left: 50px;
+    top: 1px; 
+}
+
+
+#title{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+}
+
+
+#box1{
+    background-color: #EDEAEA;
+    width: 80%;
+    border-radius: 15px;
+}
+
+#titleRights{
+    margin-left: 40px;
+    text-align: left;
+}
+
+#contentRights{
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#linkRights{
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#exit-forum-child{
+    position: relative;
+    left:730px;
+    top:-70px;
+    width: 50px;
+}
+/*-------------------------------------forum-adolescentes------------------------------------*/
+
+#forum2_titulo{
+color: #130470;
+}
+
+.division2{
+    border-color: #130470;
+}
+
+#menu1{
+    text-align: left;
+}
+
+#menu-2{
+color: #130470;
+}
+
+#menu-2:hover, #menu-2:focus{
+    color:#fff;
+    background-color: #130470;
+    border-radius: 15px;
+    padding: 8px;
+} 
+
+#division3{
+    border-color:#cacaca;
+    width: 100%;
+}
+
+#like{
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    left: 80px;
+}
+
+#comment{
+    border: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    align-items: center;
+    padding-top: -20px;
+    justify-content: center;
+    margin-top: -20px !important; 
+    position: relative;
+    left: 550px;
+
+}
+
+.btn border-0{
+    align-items: left;
+}
+
+.bg-light{
+    background-color: white !important;
+}
+
+.nav-link{
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+}
+
+#navigation1{
+    margin-left: 300px;
+    margin-right: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*----------------------------------forum-instituições-familias-psicologa-informatico-equipaprochild---------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------Registo------------------------------------*/
+
+
+#btnRegistar {
+    background: rgba(229, 0, 78, 0.63);
+    border-radius: 31.5px;
+    width: 170px;
+    height: 45px;
+    padding:12px;
+    position: absolute;
+    top:89%;
+    left:82%;
+}
+
+.registo_body{
+    background-color: #e7e7e7;
+
+}
+
+#title-reg{
+    position: relative;
+    left: 18%;
+    top:-20px;
+}
+
+#title-registo{
+    position: relative;
+    left:-70%;
+    font-size: 40px;
+}
+
+#reg-logo{
+    position: relative;
+    top:20px;
+}
+
+
+/*-------------------------------------login--------------------------------------------*/
+
+.logo-login{
+    height: 380px;
+    width: 380px;
+    position: relative;
+    left:-340px;
+    top:80px;
+}
+
+ #emailLogin{
+     position:relative;
+     right: -420px;
+     top:-200px;
+ }
+
+ #pwd1{
+     position:relative;
+     right:-420px;
+     top:-180px;
+
+ }
+
+ #btnlogin{
+     position: relative;
+     left: 60px;
+     top:-110px;
+ }
+
+ #login-title{
+     position: relative;
+     left:21px;
+     top:100px;
+ }
+
+#login{
+    background-color: #ebebeb;
+}
+
+
+#login-conta{
+    position: relative;
+    left:630px;
+    top:-60px;
+}
+
+#login-reg{
+    background-color: #b6b6b6;
+    border-radius: 15px;
+    width: 120px;
+    height: 45px;
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+    left:618px;
+    top:-50px;
+}
+
+#login-reg:hover, #login-reg:focus {
+    background-color: #a3a3a3;
+    border-radius: 15px;
+    width: 120px;
+    height: 45px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+
+/*----------------------------------materiais------------------------------------*/
+
+#materiais_titulo{
+    color:rgba(229, 0, 78, 0.63);
+}
+
+#division4{
+    border-color:rgba(229, 0, 78, 0.63);
+}
+
+#menu_materiais{
+    color: slategrey;
+    margin-left: 440px;
+    cursor: pointer;
+}
+
+#menu_tmateriais{
+    color:slategrey;
+    position: relative;
+    margin-left: 450px;
+    justify-content: space-between;
+
+}
+
+
+#add_image{
+    width: 1.5%;
+    height: 1.5%;
+    margin-left: 950px;
+}
+
+#menu_materiais:hover,#menu_materiais:focus,#menu_tmateriais:focus, #menu_tmateriais:hover{
+    background-color: rgba(229, 0, 78, 0.63);
+    color: #fff;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+/*---------------------------------jogos-adolescentes-----------------------------------*/
+
+.title-jogos{
+    color:#D80E9F;
+    position:relative;
+    align-items: center;
+    left:-223px;
+
+}
+
+.division4{
+   border-color:#D80E9F !important;
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+}
+.imagem {
+  width: 200px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+}
+
+#cartaz{
+    width: 258px;
+    height: 185px;
+    border-radius: 10px;
+    position: absolute;
+    left:-30px;
+    top:30%;
+}
+
+
+.space{
+    height: 150px;
+}
+
+/*-----------------------------------JOGOS-CRIANÇAS----------------------------------*/
+
+#jogo-title{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    left:-540px;
+
+}
+
+.space2{
+    height: 55px;
+}
+/*---------------------------------------BOT--------------------------------------*/
+
+
+.title-bot{
+    color:#9A3FD1;
+    position:relative;
+    align-items: center;
+    left:-223px;
+}
+
+.division6{
+    border-color:#9A3FD1 !important;
+}
+
+/*--------------------------------------------------------linhas-apoio-------------------------------*/
+
+.title-linha{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 50px;
+color:#F4BF7F;
+position: absolute;
+align-items: center;
+left:415px;
+top:-36px;
+}
+
+.division7{
+    border-color: #F4BF7F;
+}
+
+#box3{
+    background-color: #dbdbdb;
+    width: 30%;
+    border-radius: 15px;
+    position: relative;
+    left:550px;
+    padding-top:10px;
+}
+
+#fundo1{
+    position: relative;
+    left:-150px;
+    top:-450px;
+}
+
+#fundo2{
+    position: relative;
+    left:-400px;
+    top:-300px;
+}
+
+#fundo3{
+    position: relative;
+    left:-400px;
+    top:-100px;
+}
+
+
+
+#fundo4{
+position: relative;
+left:280px;
+top:-450px;
+}
+
+#fundo5{
+position:relative;
+left:450px;
+top:-280px;
+}
+
+
+#fundo6{
+    position: relative;
+    left:200px;
+    top:-80px;
+
+}
+
+/*-----------linhas-apoio-criança------------------*/
+
+#titleApoio{
+    color:#F4BF7F;
+}
+#box4{
+    background-color: #dbdbdb;
+    width: 30%;
+    border-radius: 15px;
+    position: relative;
+    left:-490px;
+    top:150px;
+    padding-top:10px;
+}
+.logo4{
+    position: relative;
+    top:-200px;
+}
+
+/*---------------------------------conta----------------------------------------*/
+
+.title-conta {
+    color: green;
+    margin-left: -6%;
+}
+
+.linhaverde {
+    margin-top: 10px !important;
+    margin-bottom: 2rem;
+    border-top: 2px solid green;
+    width: 1000px;
+}
+
+.stringBox1 {
+    margin-left: 350px;
+    width: 450px;
+    border-radius: 80px !important;
+}
+
+.inputBorder{
+    width: 450px;
+    border-radius: 80px !important;
+}
+
+.stringBox2 {
+    width: 450px;
+    border-radius: 80px !important;
+}
+
+.btn_2 {
+    width: 200px;
+    height: 55px;
+    background:#c5dbc6;
+    opacity: 1;
+    position: relative;
+    top: 10px;
+    left: 565px;
+    border-radius: 31px;
+    overflow: hidden;
+    border: none;
+    box-shadow: -4px 4px 2px rgb(171 171 171 / 50%);
+}
+
+.btn_2:hover, .btn_2:focus {
+    background:#b6c9b7;
+}
+
+.confirmAlte {
+    width: 43px;
+    color: rgba(76, 76, 76);
+    position: absolute;
+    top: 24px;
+    left: px;
+    font-family: Poppins;
+    font-size: 21px;
+    opacity: 1;
+    text-align: left;
+}
+
+
+/*--Toggle--*/
+
+div.toggle-btn {
+    position: relative;
+    top: 15px;
+    margin-left: 50px;
+}
+
+.toggle-btn label {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 20px;
+    background: #aaa;
+    border-radius: 30px;
+}
+
+.toggle-btn label::before {
+    position: relative;
+    content: "";
+    width: 14px;
+    height: 16px;
+    background: #ddd;
+    display: block;
+    border-radius: 50%;
+    top: 2px;
+    left: 1px;
+}
+
+.toggle-btn input:checked+label {
+    background: lightgreen;
+}
+
+.toggle-btn input:checked+label:before {
+    left: 16.5px;
+}
+
+/*----------------------cartas------------------------*/
+
+.cartazes{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.btn_6{
+background-color: #fae3f6;
+border-radius: 15px;
+height: 40px;
+width: 150px;
+border-color: #fae3f6;
+box-shadow: none;
+cursor: pointer;
+overflow: hidden;
+}
+
+.btn-5{
+background-color: #fae3f6;
+border-radius: 15px;
+height: 40px;
+width: 150px;
+border-color: #fae3f6;
+box-shadow: none;
+cursor: pointer;
+overflow: hidden;
+}
+
+.btn_6:focus, .btn_6:hover, .btn-5:focus, .btn-5:hover {
+    background-color: #ffd3f8;
+}
+
+
+.cartaz1{
+    position: relative;
+   left: 560px;
+}
+
+.cartazes2{
+    position: relative;
+    top:200px;
+    left: 90px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.btn_7, .btn_8 {
+background-color: #fae3f6;
+border-radius: 15px;
+height: 40px;
+width: 150px;
+border-color: #fae3f6;
+box-shadow: none;
+cursor: pointer;
+overflow: hidden;
+position: relative;
+top:300px;
+left:-465px;
+}
+
+.btn_7:focus, .btn_7:hover, .btn_8:focus, .btn_8:hover {
+    background-color: #ffd3f8;
+}
+
+
+
+/*-------------------------------denuncia-------------------------------------------*/
+
+#descricao{
+    width: 950px;
+    height:50px ;
+  
+}
+
+.btn_5{
+    position: relative;
+    left:780px;
+    top:70px;
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    background-color: #f7a2df;
+    cursor: pointer;
+    border-color: #f7a2df;
+
+}
+
+.btn_5:focus, .btn_5:hover {
+    position: relative;
+    left:780px;
+    top:70px;
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    background-color: #f190d6;
+    cursor: pointer;
+    border-color: #f7a2df;
+}
+
+.title-denuncia{
+    color: #f7a2df;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    left:-453px;
+}
+
+.linharosa{
+    border-color: #f7a2df;
+}
+
+#exit3{
+   position: relative; 
+   left:690px;
+   top:-80px;
+   width: 45px;;
+}
+
+#exit4{
+    position:relative;
+    left:1050px;
+    top:-210px;
+    width: 45px;
+}
+
+.logo5{
+    position: relative ;
+    top:10px;
+    left:50px;
+}
+
+#logo{
+    position: relative;
+    top:10px;
+    left:50px;
+    width: 80px;
+}
+
+
+/*-----------------------------------------Visualizar-denuncias-----------------------------------------*/
+
+
+
+#title-ver-denun{
+    position: relative;
+    left:-220px;
+}
+
+#delete-denun{
+border-radius: 15px;
+background-color: #d884d8;
+padding: 20px 40px !important;
+position: relative;
+top:30px;
+}
+
+#ver-denun{
+border-radius: 15px;
+background-color: #d884d8;
+padding: 20px 40px !important;
+position: relative;
+top: 30px;
+}
+
+#ver-denun:hover, #ver-denun:focus, #delete-denun:hover, #delete-denun:focus {
+    border-radius: 15px;
+    background-color: #c75cc7;
+    padding: 20px 40px !important;
+    position: relative;
+    top:30px; 
+}
+
+#Table-denun {
+    cursor: pointer;
+}
+
+tr td:last-child {
+    text-align: right;
+}
+
+tr.selecionado td {
+    background-color: #D8D8D8;
+}
+
+.page-link:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.page-link {
+    color: black;
+}
+
+.page-link:hover {
+    background-color: #E5E5E5;
+    border-color: #E5E5E5;
+    color: black;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+
+
+.direitos-frase1{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.direitos-frase2{
+    font-size: 20px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+#cora1{
+    position: relative;
+    top:-740px;
+    left:-320px;
+}
+
+#cora2{
+    position: relative;
+    top:-350px;
+    left:-500px;
+}
+
+#cora3{
+    position: relative;
+    top:-300px;
+    left:550px;
+}
+
+#cora4{
+    position: relative;
+    top:-600px;
+    left:340px;
+}
+
+#music{
+    position: relative;
+    top:-100px;
+    left:-510px;
+}
+
+#sun{
+    position: relative;
+    top:-540px;
+    left:450px;
+}
+
+#a1{
+    position: absolute;
+    top:140px;
+    left:100px;
+}
+
+#a2{
+    position: absolute;
+    left:1200px;
+    top:70px;
+}
+
+#a3{
+    position: absolute;
+    top:600px;
+    right:150px;
+}
+
+#a4{
+    position: absolute;
+    left:200px;
+    top:630px;
+}
+
+#b1{
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+
+#b2{
+    position: absolute;
+    left:1300px;
+    top:550px;
+}
+
+#b3{
+    position: absolute;
+    top:10px;
+    left:1100px;
+}
+
+
+#b5{
+    position: absolute;
+  top:500px;
+  left:300px;
+}
+
+#c1{
+    position: relative;
+    top:-400px;
+    left:-20px;
+}
+
+#c2{
+    position: relative;
+    top:-850px;
+    left:-370px;
+}
+
+#c3{
+    position: relative;
+    top:-360px;
+    left:630px;
+}
+
+#c4{
+    position: relative;
+    top:-1200px;
+    left:-500px;
+}
+
+#c5{
+    position: relative;
+    top:-1200px;
+    left:160px;
+}
+
+#d1{
+    position: absolute;
+    top:150px;
+    left:20px;
+
+}
+
+#d3{
+    position: absolute;
+    top:500px;
+    left:180px;
+   
+}
+
+#d4{
+    position: absolute;
+    top:20px;
+    left:1200px;
+}
+
+#d2{
+    position: absolute;
+    left:1180px;
+    top:520px;
+}
+
+
+.btn-remover{
+cursor: pointer;
+position: relative;
+top:10px;
+border-radius: 15px;
+border: #D80E9F;
+background-color: #d884d8;
+padding: 10px 20px !important;
+
+}
+
+.btn-remover:hover, .btn-remover:focus {
+cursor: pointer;
+position: relative;
+top:10px;
+border-radius: 15px;
+border: #D80E9F;
+background-color: #d66dd6;
+padding: 10px 20px !important;
+}
+
+#e1{
+    position: absolute;
+   top:50px;
+   left:200px;
+}
+
+#e2{
+    position: absolute;
+    top:428px;
+    left:1200px;
+}
+
+#e3{
+    position: absolute;
+    top:120px;
+    left:1300px;
+}
+
+#e4{
+    position: absolute;
+    left:100px;
+    top:500px;
+}
+
+#cor-1{
+position: absolute;;
+top: 400px;
+left: 80px;
+}
+
+#cor-2{
+position: absolute;
+top: 670px;
+left:1300px;
+}
+
+#cor-3{
+position: absolute;
+top:200px;
+left:1300px;
+}
+
+#cors-3{
+    position: relative;
+    top:-1200px;
+    left:549px;
+    } 
+
+
+#cor-4{
+position: absolute;
+top:1000px;
+left:30px;
+}
+
+#f1{
+    position: relative;
+    top:-800px;
+    left:870px;
+}
+
+#f2{
+    position: relative;
+    top:-650px;
+    left:-550px;
+}
+
+
+#f3{
+    position: relative;
+    top:-180px;
+    left:-550px;
+}
+
+#f4{
+    position: relative;
+    top:-300px;
+    left:200px;
+}
+
+#g1{
+    position: relative;
+    top:-900px;
+    left:900px;
+}
+
+#h1{
+    position: relative;
+    top:-800px;
+    left: 800px;
+}
+
+#i1{
+    position: relative;
+    top:-665px;
+    left: 830px;
+}
+
+#logo-2{
+    position: absolute;
+    top:10px;
+}
+
+#den-name,
+#den-adress,
+#den-phone,
+#den-email,
+#den-text{
+    border-width: 0 0 2px 0;
+    width: 93%;
+    background-color: white;
+    border-color: rgb(118, 118, 118);
+    margin-left: 30px;
+    margin-bottom: 50px;
+    
+   
+}
+
+.jogo-frase1{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    font-weight: lighter;
+    color:#ff56c7;
+}
+
+.btn-remover-for{
+cursor: pointer;
+position: relative;
+top:10px;
+border-radius: 15px;
+border: #130470;
+background-color: #130470;
+padding: 10px 20px !important;
+}
+
+.btn-remover-for:focus, .btn-remover-for:hover{
+cursor: pointer;
+position: relative;
+top:10px;
+border-radius: 15px;
+border: #0f035c;
+background-color: #0f0458;
+padding: 10px 20px !important;
+}
+
+.legenda{
+    font-weight: 300;
+    font-size: 20px;
+    color:rgb(253, 199, 82);
+}
+
+.swal2-styled.swal2-cancel {
+    background-color: rgb(229, 0, 78) !important;
+}
+
+
+#emogy{
+    width: 140px;
+    position: relative;
+    bottom:20px;
+    left:620px;
+
+}
+
+.confirmarsug{ 
+    position: relative;
+    left:860px;
+    top:70px;
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    background-color:#130470;
+    cursor: pointer;
+    border-color: #0f0458;
+    color:white;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.confirmarsug:hover, .confirmarsug:focus{
+    position: relative;
+    left:860px;
+    top:70px;
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    background-color:#0f0458;
+    cursor: pointer;
+    border-color: #0f0458;
+    color:white;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#delete-sug, #delete-critica{
+border-radius: 15px;
+background-color: #130470;
+padding: 20px 40px !important;
+position: relative;
+top:30px;
+
+}
+
+#ver-sug, #ver-critica{
+border-radius: 15px;
+background-color: #130470;
+padding: 20px 40px !important;
+position: relative;
+top:30px;
+}
+
+#ver-sub:hover, #ver-sug:focus, #delete-sug:focus, #delete-sug:hover, #delete-critica:focus, #delete-critica:hover, #ver-critica:focus, #vercritica:hover{
+border-radius: 15px;
+background-color: #0d034b;
+padding: 20px 40px !important;
+position: relative;
+top:30px;
+}
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="assets/css/paginainicial.css"> -->
+
+</head>
+
+<style>
+    .table-layout {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family:"Trebuchet MS";
+    margin: 0 auto 0;
+}
+.table-layout td, .table-layout th {
+    border: 1px solid grey;
+    padding: 5px 5px 0;
+}
+.table-layout td {
+    text-align: left;
+}
+.selected {
+    color: red;
+    background-color: yellow;
+}
+</style>
+
+
+<body>
+    <!-- highlighting the table rows onclick -->
+    <!-- <div id="dataTable_wrapper"></div> -->
+    
+    
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $("#Table-denun tr").click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');    
+            var id =$(this).find('td:first').html();
+            alert(id)
+         });
+</script>
+
+</html>
