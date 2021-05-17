@@ -40,7 +40,7 @@ function getReports() {
     <table class="table table-bordered supTable" id="Table-denun" width="100%"  cellspacing="0" data-page-length='-1'>
         <thead>
             <tr>
-                <th>ID</th>
+                <th style="display:none">ID</th>
                 <th>Titulo</th>
                 <th>Nome</th>
                 <th>Contacto</th>
@@ -50,11 +50,13 @@ function getReports() {
         </thead>
         <tbody>`
 
+        let keys = Object.keys(data[0]);
+        console.log(keys)
 
         for (let i = 0; i < data.length; i++) {
             txt += `
             <tr>
-                <td>${data[i].idReport}</td>
+                <td style="display:none">${data[i].idReport}</td>
                 <td>${data[i].title}</td>
                 <td>${data[i].name}</td>
                 <td>${data[i].phoneNr}</td>
@@ -69,19 +71,11 @@ function getReports() {
 
         
     }).then(() => {
-        $("#Table-denun tr").click(function () {
+        $("#Table-denun tbody tr").click(function () {
             
-            let selected = $(this).hasClass('selected');
-            console.log(selected)
-            if(selected){
-                $(this).removeClass('selected')
-                alert("fei")
-            } else {
-                $(this).addClass('selected');
-                var id = $(this).find('td:first').html();
-                sessionStorage.setItem('id_denun', id)
-                alert(id)
-            }
+            $(this).addClass('selected').siblings().removeClass('selected');
+            var id = $(this).find('td:first').html();
+            sessionStorage.setItem('id_complaint', id)
         });
     })
 

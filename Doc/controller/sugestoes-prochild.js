@@ -6,7 +6,7 @@ const urlBase = "http://localhost:8080/api/"
 
 document.getElementById('ver-sug').addEventListener('click', function () {
 
-    let selected = $("#Table-denun tr").hasClass("selected");
+    let selected = $("#Table-denun tbody tr").hasClass("selected");
     console.log(selected)
     if(selected){
         let id = sessionStorage.getItem('id_suggestion')
@@ -30,7 +30,7 @@ document.getElementById('ver-sug').addEventListener('click', function () {
 });
 
 document.getElementById('delete-sug').addEventListener('click', function () {
-    let selected = $("#Table-denun tr").hasClass("selected");
+    let selected = $("#Table-denun tbody tr").hasClass("selected");
     console.log(selected)
 
     if(selected){
@@ -103,9 +103,9 @@ function getSuggestions() {
             <tr>
                 <td>${data[i].idSuggestion}</td>
                 <td>${data[i].title}</td>
-                <td>Nome</td>
-                <td>Contacto</td>
-                <td>Morada</td>
+                <td>${data[i].name}</td>
+                <td>${data[i].phoneNr}</td>
+                <td>${data[i].county}</td>
                 <td>${data[i].suggestion}</td>
             </tr>
         `
@@ -116,7 +116,7 @@ function getSuggestions() {
 
         
     }).then(() => {
-        $("#Table-denun tr").click(function () {
+        $("#Table-denun tbody tr").click(function () {
             
             $(this).addClass('selected').siblings().removeClass('selected');
             var id = $(this).find('td:first').html();

@@ -28,8 +28,8 @@ $('#addArticle').addEventListener('click', function () {
                 "link": $('#txtLink').value
             }
             fetch.postData('articles', data).then(response => {
-                console.log(response.success)
-                if (response.success) {
+                console.log(response.ok)
+                if (response.ok) {
                     Swal.fire(
                         'Adionado com sucesso!',
                         '',
@@ -57,7 +57,7 @@ $('#deleteArticle').addEventListener('click', function () {
         console.log(data)
         let txt =''
         for(let i = 0; i<data.length; i++){
-            txt += `<h10>${data[i].idArticle} :  ${data[i].title}</h10>`
+            txt += `<h10>${data[i].idArticle} :  ${data[i].title}</h10><br>`
         }
         console.log(txt)
         Swal.fire({
@@ -74,8 +74,8 @@ $('#deleteArticle').addEventListener('click', function () {
             preConfirm: () => {
                 
                 fetch.deleteData('articles/' + $('#txtId').value).then(response => {
-                    console.log(response.success)
-                    if (response.success) {
+                    console.log(response.ok)
+                    if (response.ok) {
                         Swal.fire(
                             'Eliminado com sucesso!',
                             '',

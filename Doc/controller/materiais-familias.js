@@ -49,7 +49,7 @@ $('#addFile').addEventListener("click", e => {
     fetch.postFile('upload', formData).then(response => {
         if (response.ok) {
             Swal.fire(
-                'Material adicionado com successo',
+                'Material adicionado com sucesso',
                 '',
                 'success'
             ).then((result) => {

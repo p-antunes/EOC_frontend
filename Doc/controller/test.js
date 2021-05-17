@@ -28,6 +28,10 @@ $('#suggestion').addEventListener('click', function () {
     suggestion();
 });
 
+$('#changePwd').addEventListener('click', function () {
+    changePassword();
+});
+
 function login() {
     // let credenciais = {
     //     "email": $('#emailLogin').value.trim(),
@@ -158,7 +162,16 @@ function suggestion() {
     f.postData('suggestions', suggestion);
 }
 
+function changePassword() {
+    let newPassword = {
+        "password": "1234567",
+        "confirmPassword":"1234567"
+    }
 
+    f.putData('children/'+ sessionStorage.getItem('id_user') + '/password', newPassword).then( response => {
+        console.log(response)
+    }); 
+}
 
 function TypeOfUserPage(type) {
     switch (type) {

@@ -1,5 +1,5 @@
 "use strict";
-export { getData, postData, deleteData, postFile };
+export { getData, postData, deleteData, postFile,putData };
 
 
 const urlBase = "http://localhost:8080/api/"
@@ -23,6 +23,23 @@ async function postData(route, data) {
             'Cookie': 'token=' + sessionStorage.getItem("accessToken")
         },
         method: 'POST',
+        body: JSON.stringify(data)
+    })
+
+    return response;
+}
+
+async function putData(route, data) {
+    console.log(urlBase + route)
+    const response = await fetch(urlBase + route, {
+        credentials: 'include',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + sessionStorage.getItem("accessToken"),
+            'Cookie': 'token=' + sessionStorage.getItem("accessToken")
+        },
+        method: 'PUT',
         body: JSON.stringify(data)
     })
 

@@ -4,7 +4,7 @@ const urlBase = "http://localhost:8080/api/"
 
 document.getElementById('ver-critica').addEventListener('click', function () {
 
-    let selected = $("#Table-denun tr").hasClass("selected");
+    let selected = $("#Table-denun tbody tr").hasClass("selected");
     console.log(selected)
     if(selected){
         let id = sessionStorage.getItem('id_complaint')
@@ -28,7 +28,7 @@ document.getElementById('ver-critica').addEventListener('click', function () {
 });
 
 document.getElementById('delete-critica').addEventListener('click', function () {
-    let selected = $("#Table-denun tr").hasClass("selected");
+    let selected = $("#Table-denun tbody tr").hasClass("selected");
     console.log(selected)
 
     if(selected){
@@ -45,8 +45,8 @@ document.getElementById('delete-critica').addEventListener('click', function () 
             preConfirm: () => {
                 let id = sessionStorage.getItem('id_complaint');
                 deleteData('suggestions/' + id).then(response => {
-                    console.log(response.success)
-                    if (response.success) {
+                    console.log(response.ok)
+                    if (response.ok) {
                         Swal.fire(
                             'Eliminado com sucesso!',
                             '',
@@ -87,7 +87,7 @@ function getSuggestions() {
     <table class="table table-bordered supTable" id="Table-denun" width="100%"  cellspacing="0" data-page-length='-1'>
         <thead>
             <tr>
-                <th>ID</th>
+                <th style="display:none">ID</th>
                 <th>Titulo</th>
                 <th>Nome</th>
                 <th>Contacto</th>
@@ -101,7 +101,7 @@ function getSuggestions() {
         for (let i = 0; i < data.length; i++) {
             txt += `
             <tr>
-                <td>${data[i].idComplaint}</td>
+                <td style="display:none">${data[i].idComplaint}</td>
                 <td>${data[i].name}</td>
                 <td>${data[i].phoneNr}</td>
                 <td>${data[i].postalCode}</td>
@@ -116,7 +116,7 @@ function getSuggestions() {
 
         
     }).then(() => {
-        $("#Table-denun tr").click(function () {
+        $("#Table-denun tbody tr").click(function () {
             
             $(this).addClass('selected').siblings().removeClass('selected');
             var id = $(this).find('td:first').html();
